@@ -9,14 +9,14 @@ This is the code for the PyLadies advent, a Twitter bot that posts a resource ev
 ### Create virtual environment on the project root folder
 
 ```sh
-python3.10 -m venv venv
+python3.9 -m venv venv
 ```
 
 #### Activate virtual environment
 
 ```sh
 venv\Scripts\activate
-// or on linux
+# or on linux
 source venv/bin/activate
 ```
 
@@ -24,7 +24,7 @@ source venv/bin/activate
 
 ```sh
 # after activating the virtual env
-pip -r requirements.txt
+pip install -r requirements.txt
 ```
 
 #### Deactivate virtual environment
