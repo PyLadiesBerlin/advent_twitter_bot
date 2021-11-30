@@ -6,7 +6,7 @@ from sendgrid.helpers.mail import *
 logger = logger.bind(name="PyLadiesAdvent")
 
 
-def send_email(e, SENDGRID_API_KEY, NOTIFY_EMAIL, subject="unknown"):
+def send_email(e, tweet_text, SENDGRID_API_KEY, NOTIFY_EMAIL, subject="unknown"):
     """
     Create the body of the message (a plain-text and an HTML version).
     text is your plain-text email
@@ -29,13 +29,16 @@ def send_email(e, SENDGRID_API_KEY, NOTIFY_EMAIL, subject="unknown"):
         <p>Something went wrong in the PyLadies Advent project:</p>
         <p><b>%s</b></p>
         <p> Do not freak out, everything is gona be ok. :)</p>
+        <p> Please sen the tweet for today manually </p>
+        <p>%s</p>
         <br>
         Hugs!<br>
         you
     </body>
     </html>
     """ % (
-        e
+        e,
+        tweet_text
     )
 
     sg = SendGridAPIClient(api_key=SENDGRID_API_KEY)
@@ -52,7 +55,7 @@ def send_email(e, SENDGRID_API_KEY, NOTIFY_EMAIL, subject="unknown"):
     try:
         response = sg.send(message=content)
         if response.status_code == 202:
-            logger.info("Errow email sent")
+            logger.info("Error email sent")
         else:
             logger.info(
                 f"Not sure if email was sent, but no exception raised: {response.status_code}"

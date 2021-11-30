@@ -50,7 +50,7 @@ def main():
 
     except Exception as e:
         logger.error(e)
-        send_email(e, env.CONF["SENDGRID_API_KEY"], env.CONF["NOTIFY_EMAIL"])
+        send_email(e, message, env.CONF["SENDGRID_API_KEY"], env.CONF["NOTIFY_EMAIL"])
 
 
 if __name__ == "__main__":
