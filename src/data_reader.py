@@ -7,7 +7,7 @@ import pandas as pd
 logger = logger.bind(name="PyLadiesAdvent")
 
 
-def read_post_data(env):
+def read_post_data():
     """
     Read the post for the given day from the csv
     """
@@ -19,11 +19,7 @@ def read_post_data(env):
     if post_idx < 0:
         raise Exception("It's not advent yet")
 
-    if env == "dev":
-        file_path = "src/data/advent_data.csv"
-    else:
-        file_path = "data/advent_data.csv"
-
+    file_path = "src/data/advent_data.csv"
     data = pd.read_csv(file_path)
     logger.debug(f"Retrieved data, length: {len(data)}")
 

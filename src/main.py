@@ -20,14 +20,11 @@ def main():
         logger.info("Some environment variables do not exist.")
         sys.exit()
 
-    env = config.CONF["ENV"]
-
     # Get post for the day
-    advent_post = read_post_data(env)
+    advent_post = read_post_data()
 
     # Create twitter message
     message = twitter_message(
-        env,
         advent_post["day_to_post"].values[0],
         advent_post["resource_name"].values[0],
         advent_post["resource_description"].values[0],
@@ -48,7 +45,7 @@ def main():
         logger.info("Connected to Twitter...")
 
         # Post to  Twitter
-        # twitter_post(api, message)
+        twitter_post(api, message)
 
         logger.info(f"The advent post has been posted! {message}")
 
