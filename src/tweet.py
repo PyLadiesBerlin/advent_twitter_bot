@@ -27,7 +27,7 @@ def twitter_message(post_day, name, description, url, hashtags):
         synonyms: str, concatenated synonyms
         men: str, concatenated botanists names
         cfa: str, call for action to the project
-    returns: 
+    returns:
         280 characters string
     """
 
@@ -47,7 +47,7 @@ def twitter_message(post_day, name, description, url, hashtags):
         name=name,
         description=description,
         url=url,
-        hashtags=hashtags
+        hashtags=hashtags,
     )
 
     if len(text) > lim:

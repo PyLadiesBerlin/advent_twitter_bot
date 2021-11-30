@@ -14,9 +14,9 @@ def send_email(e, SENDGRID_API_KEY, NOTIFY_EMAIL, subject="unknown"):
     if the reciever is able to view html emails then only the html
     email will be displayed
     """
-    
+
     text = """
-        Hi!\nHow are you?\nPlease check on the Advent project, 
+        Hi!\nHow are you?\nPlease check on the Advent project,
         something has gone wrong!
     """
 
@@ -34,17 +34,21 @@ def send_email(e, SENDGRID_API_KEY, NOTIFY_EMAIL, subject="unknown"):
         you
     </body>
     </html>
-    """ % (e)
+    """ % (
+        e
+    )
 
     sg = SendGridAPIClient(api_key=SENDGRID_API_KEY)
     from_email = Email(NOTIFY_EMAIL)
     to_email = To(NOTIFY_EMAIL)
     subject = "Issue in PyLadies Advent project: " + subject
-    content = Mail(from_email,
-                   to_email,
-                   subject,
-                   plain_text_content=PlainTextContent(text),
-                   html_content=HtmlContent(html))
+    content = Mail(
+        from_email,
+        to_email,
+        subject,
+        plain_text_content=PlainTextContent(text),
+        html_content=HtmlContent(html),
+    )
     response = sg.send(message=content)
     logger.info(response.status_code)
     logger.info((response.body).decode("utf-8"))

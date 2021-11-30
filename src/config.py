@@ -5,8 +5,7 @@ import os
 load_dotenv()
 
 
-class Config():
-
+class Config:
     def __init__(self):
 
         self.CONF = {
@@ -16,7 +15,7 @@ class Config():
             "TWITTER_BEARER_TOKEN": os.getenv("TWITTER_BEARER_TOKEN"),
             "TWITTER_ACCESS_TOKEN": os.getenv("TWITTER_ACCESS_TOKEN"),
             "SENDGRID_API_KEY": os.getenv("SENDGRID_API_KEY"),
-            "NOTIFY_EMAIL": os.getenv("NOTIFY_EMAIL")
+            "NOTIFY_EMAIL": os.getenv("NOTIFY_EMAIL"),
         }
 
     def val_config(self):
