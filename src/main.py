@@ -14,43 +14,47 @@ logger = logger.bind(name="PyLadiesAdvent")
 
 def main():
 
-    env = Config()
+    config = Config()
 
-    if not env.val_config():
+    if not config.val_config():
         logger.info("Some environment variables do not exist.")
         sys.exit()
 
+    env = config.CONF["ENV"]
+
+    # Get post for the day
+    advent_post = read_post_data(env)
+
+    # Create twitter message
+    message = twitter_message(
+        env,
+        advent_post["day_to_post"].values[0],
+        advent_post["resource_name"].values[0],
+        advent_post["resource_description"].values[0],
+        advent_post["resource_url"].values[0],
+        advent_post["hashtags"].values[0],
+    )
+
     try:
-        # Get post for the day
-        advent_post = read_post_data()
 
         # Connect to Twitter
         api = twitter_connect(
-            env.CONF["TWITTER_API_KEY"],
-            env.CONF["TWITTER_API_SECRET_KEY"],
-            env.CONF["TWITTER_ACCESS_TOKEN"],
-            env.CONF["TWITTER_ACCESS_TOKEN_SECRET"],
+            config.CONF["TWITTER_API_KEY"],
+            config.CONF["TWITTER_API_SECRET_KEY"],
+            config.CONF["TWITTER_ACCESS_TOKEN"],
+            config.CONF["TWITTER_ACCESS_TOKEN_SECRET"],
         )
 
         logger.info("Connected to Twitter...")
 
-        # Create twitter message
-        message = twitter_message(
-            advent_post["day_to_post"].values[0],
-            advent_post["resource_name"].values[0],
-            advent_post["resource_description"].values[0],
-            advent_post["resource_url"].values[0],
-            advent_post["hashtags"].values[0],
-        )
-
         # Post to  Twitter
-        twitter_post(api, message)
+        # twitter_post(api, message)
 
-        logger.info("The advent post has been posted!")
+        logger.info(f"The advent post has been posted! {message}")
 
     except Exception as e:
         logger.error(e)
-        send_email(e, message, env.CONF["SENDGRID_API_KEY"], env.CONF["NOTIFY_EMAIL"])
+        send_email(e, message, config.CONF["SENDGRID_API_KEY"], config.CONF["NOTIFY_EMAIL"])
 
 
 if __name__ == "__main__":

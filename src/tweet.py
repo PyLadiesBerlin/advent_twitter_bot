@@ -18,7 +18,7 @@ def twitter_connect(
     return api
 
 
-def twitter_message(post_day, name, description, url, hashtags):
+def twitter_message(environment, post_day, name, description, url, hashtags):
     """
     Creates twitter message
     Inputs:
@@ -34,7 +34,10 @@ def twitter_message(post_day, name, description, url, hashtags):
     # Message must be 2 characters shorter (278)
     lim = 280 - 2
 
-    file_loader = FileSystemLoader("src/templates")
+    if environment == "dev":
+        file_loader = FileSystemLoader("src/templates")
+    else:
+        file_loader = FileSystemLoader("templates")
 
     env = Environment(loader=file_loader)
     if post_day == 0:
