@@ -1,1 +1,1 @@
-✨🎁 DAY {{ post_day }}: check out {{ name }}, {{ description }}. {{ url }} {{ hashtags }} #PyLadiesBerlinAdventCalendar2021
+✨🎁 DAY {{ post_day }}: check out {{ name }}, {{ description }} {{ url }} {{ hashtags }} #PyLadiesBerlinAdventCalendar2021
