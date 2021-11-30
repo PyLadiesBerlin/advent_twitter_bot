@@ -54,4 +54,5 @@ autopep8 --in-place --aggressive --aggressive .\script_name.py
 
 Configuration for pycodestyle can be found in the `./setup.cfg` file. The linters will also run as github actions when code is pushed to Github.
 
-
+## Creative Commons License
+This project is under the [MIT](./LINCENSE) creative commons license. It's code has been influenced, inspired and in parts taken from the project [Named After Men](https://github.com/TaiLinhares/named-after-men) by [Tai Linhares](https://github.com/TaiLinhares).
