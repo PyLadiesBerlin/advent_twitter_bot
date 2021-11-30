@@ -23,15 +23,13 @@ def twitter_message(post_day, name, description, url, hashtags):
     Creates twitter message
     Inputs:
         post_day: int, day since the project started
-        name: str, plant scientific name
-        synonyms: str, concatenated synonyms
-        men: str, concatenated botanists names
-        cfa: str, call for action to the project
+        name: str
+        description: str
+        url: str, url for project
+        hashtags: str, resource specific tags
     returns:
         280 characters string
     """
-
-    content_text = ""
 
     # Message must be 2 characters shorter (278)
     lim = 280 - 2
@@ -39,8 +37,10 @@ def twitter_message(post_day, name, description, url, hashtags):
     file_loader = FileSystemLoader("src/templates")
 
     env = Environment(loader=file_loader)
-
-    template = env.get_template("tweet_template.txt")
+    if post_day == 0:
+        template = env.get_template("day_0_template.txt")
+    else:
+        template = env.get_template("tweet_template.txt")
 
     text = template.render(
         post_day=str(post_day),
@@ -51,7 +51,7 @@ def twitter_message(post_day, name, description, url, hashtags):
     )
 
     if len(text) > lim:
-        content_text = text[: (lim - 2)]
+        content_text = text[:lim]
     else:
         content_text = text
 

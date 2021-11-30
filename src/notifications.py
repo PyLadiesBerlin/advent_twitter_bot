@@ -49,7 +49,13 @@ def send_email(e, SENDGRID_API_KEY, NOTIFY_EMAIL, subject="unknown"):
         plain_text_content=PlainTextContent(text),
         html_content=HtmlContent(html),
     )
-    response = sg.send(message=content)
-    logger.info(response.status_code)
-    logger.info((response.body).decode("utf-8"))
-    logger.info(response.headers)
+    try:
+        response = sg.send(message=content)
+        if response.status_code == 202:
+            logger.info("Errow email sent")
+        else:
+            logger.info(
+                f"Not sure if email was sent, but no exception raised: {response.status_code}"
+            )
+    except Exception as e:
+        raise Exception("Error sending email:", e)
