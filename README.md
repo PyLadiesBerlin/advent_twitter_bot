@@ -4,6 +4,10 @@
 
 This is the code for the PyLadies advent, a Twitter bot that posts a resource everyday during December.
 
+## Adding tips to tweet
+
+Tips and resources to tweet can be added to the CSV in `src/data/advent_data.csv`. In PyLadies Berlin google sheets there is an online copy of this which can be downloaded.
+
 ## Local setup
 
 This project has been written using Python 3.9, the easiest way to run it locally is to create a virtual env using [venv](https://docs.python.org/3/library/venv.html) and run all the commands within the virtual environment.
