@@ -12,17 +12,17 @@ day_to_post,resource_name,resource_description,resource_url,hashtags,length_of_t
 10,kaggle,It's not to late to organize a random gift exchange! Use Python to assign pairs!,https://tinyurl.com/ycyu7h5e,#secretsanta #gift,192,OK
 11,,,,,60,OK
 12,#SINTEFblog,Here's a challenge for you: how short can you write the python-code needed to generate the entire lyrics of “12 days of Christmas”,https://tinyurl.com/2p8ba73f,#challenge #python ,248,OK
-13,,,,,60,OK
-14,,,,,60,OK
-15,Reddit,Just for fun: a festive Python :) ,https://tinyurl.com/2p8hf8cv,#python ,136,OK
-16,,,,,60,OK
-17,,,,,60,OK
-18,,,,,60,OK
-19,,,,,60,OK
+13,PyO3,a Rust bindings for Python. PyO3 can be used to write native Python modules or run Python code and modules from Rust.,https://github.com/PyO3/pyo3,#rust #python,222,OK
+14,How to Contribute to Open Source,a comprehensive guide on getting involved in open source projects.,https://opensource.guide/how-to-contribute/,#opensource #python,220,OK
+15,this Redditers Christmas python!,Oner person who decided to get creative and knit their Python a wooly hat so they could also get in the festive mood :D,https://tinyurl.com/2p8hf8cv,#python ,247,OK
+16,Exercism’s Python Track,"for access to 129 exercises grouped into 15 Python Concepts, with automatic analysis of your code and personal mentoring, all 100% free.",https://exercism.org/tracks/python,#LearnToCode,265,OK
+17,Try Hack me,"Learn cyber security on TryHackMe. Earn points by answering questions, taking on challenges and maintain your hacking streak through short lessons.",https://www.tryhackme.com/christmas,#CyberSecurity,267,OK
+18,Linux Journey,get familiar with the inner workings of Linux from choosing a distributio to understanding the Kernal,https://linuxjourney.com/,#Linux #LearnToCode,218,OK
+19,Dask,"a parallel computing library that integrates with Python data-science libraries such as NumPy, pandas, and scikit-learn",https://dask.org/,#bigdata #opensource # datascience,234,OK
 20,,,,,60,OK
 21,,,,,60,OK
 22,,,,,60,OK
-23,,,,,60,OK
+23,PySpark,an interface for Apache Spark in Python. With PySpark you can do large-scale data processing on a Spark engine using Python.,https://spark.apache.org/docs/latest/api/python/,#bigdata #datascience #machinelearning,277,OK
 24,,,,,60,OK
 25,,,,,60,OK
 26,,,,,60,OK
