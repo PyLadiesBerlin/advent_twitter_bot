@@ -23,6 +23,8 @@ def main():
     # Get post for the day
     advent_post = read_post_data()
 
+    logger.info("Hello Edmond")
+
     # Create twitter message
     message = twitter_message(
         advent_post["day_to_post"].values[0],
