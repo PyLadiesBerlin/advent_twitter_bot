@@ -20,14 +20,14 @@ day_to_post,resource_name,resource_description,resource_url,hashtags,length_of_t
 18,Linux Journey,get familiar with the inner workings of Linux from choosing a distributio to understanding the Kernal,https://linuxjourney.com/,#Linux #LearnToCode,218,OK
 19,Dask,"a parallel computing library that integrates with Python data-science libraries such as NumPy, pandas, and scikit-learn",https://dask.org/,#bigdata #opensource # datascience,234,OK
 20,,,,,60,OK
-21,RAPIDS ,"which lets you accelerate most of your data science related tasks on GPU! Be it reading a CSV file, data frame manipulations or statistical machine learning",https://rapids.ai,@RAPIDSai #opensource #datascience ,275,OK
+21,RAPIDS ,"which lets you accelerate most of your data science related tasks on GPU! Be it reading CSV files, data frame manipulations or statistical machine learning",https://rapids.ai,@RAPIDSai #opensource #datascience ,274,OK
 22,Python in Space,"Big news is, more @Raspberry_Pi hardware is due to launch to space TODAY  🧑‍🚀 🧑🏿‍🚀 🚀",https://www.raspberrypi.com/weekly/more-raspberry-pi-hardware-in-space/,#AstroPi,244,OK
-23,PySpark,an interface for Apache Spark in Python. With PySpark you can do large-scale data processing on a Spark engine using Python.,https://spark.apache.org/docs/latest/api/python/,#bigdata #datascience #machinelearning,277,OK
-24,"How to Speed up a Python Program 114,000 times",a great talk by David Schachter where he talks about different ways of optimizing a python data-collecting program., https://www.youtube.com/watch?v=e08kOj2kISU,#optimization,278,OK
+23,PySpark,an interface for Apache Spark in Python. With PySpark you can do large-scale data processing on a Spark engine using Python.,https://spark.apache.org/docs/latest/api/python/,#bigdata #datascience,260,OK
+24,"How to Speed up a Python Program 114,000 times",a great talk by David Schachter discussing different ways of optimizing a python data-collecting program., https://www.youtube.com/watch?v=e08kOj2kISU,#optimization,268,OK
 25,Decorators,learn how to master Python's decorators with this tutorial on Real Python,https://realpython.com/primer-on-python-decorators/,#decorators,205,OK
 26,Numba,which translates Python functions to optimized machine code at runtime. It's designed to be used with NumPy arrays and can parallelize code for CPUs and GPUs.,https://numba.pydata.org/,@numba_jit #performance ,272,OK
 27,PyPy,"a replacement for CPython. It's a fast, compliant alternative implementation of Python built using the RPython language.",https://www.pypy.org/,#pypy #performance #optimization,237,OK
-28,Pyodide,a Python distribution which is compiled to WebAssembly and which integrates with the Python data science stack. With Pyodide you can run Python inside a web browser.,https://github.com/pyodide/pyodide,#WebAssembly,278,OK
-29,,,,,60,OK
-30,,,,,60,OK
-31,,,,,60,OK
+28,Pyodide,a Python distribution which is compiled to WebAssembly and which integrates with the Python data science stack. Pyodide lets you run Python inside a web browser!,https://github.com/pyodide/pyodide,#WebAssembly,274,OK
+29,@adafruit,"find great project ideas, hardware, blog posts and more. Adafruit is our first stop for geeking out over wearable Python projects 💖🤖🐍",https://www.adafruit.com/,#IOT #WearableWednesday #CircuitPython,268,OK
+30,@MJ_BIO,"If you enjoyed yesterdays Tweet about Adafruit, check out this Berlin PyLadies' respository which uses IOT and machine learning to keep your plants healthy!",https://github.com/mjmolina/plantaris_data,🌱,267,OK
+31,@PyLadiesBer,"thinking of learning to code in 2022? Join our community for workshops, networking, resources, mentoring, and meet other folks who enjoy programming with Python",http://berlin.pyladies.com/,#PyLadies,268,OK
